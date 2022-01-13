@@ -38,8 +38,8 @@ class InAppView : UIView {
     }
     
     func loadPopup(content: String) {
-        let bundle = Bundle(identifier: "org.cocoapods.Xennio")
-        bundle?.loadNibNamed(kCONTENT_XIB_NAME, owner: self, options: nil)
+        let bundle = Bundle.main
+        bundle.loadNibNamed(kCONTENT_XIB_NAME, owner: self, options: nil)
         containerView.fixInView(self)
         
         btnClose.setImage(UIImage(named: "icon_close", in: bundle, compatibleWith: nil), for: .normal)
